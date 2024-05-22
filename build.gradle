@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.9.6'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit 5 API and Engine
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    // JUnit 5 Parameterized Tests
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.0'
+
+    // Rest Assured
+    testImplementation 'io.rest-assured:rest-assured:4.3.3'
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+
+    // Allure
+    testImplementation 'io.qameta.allure:allure-rest-assured:2.13.9'
+    testImplementation 'io.qameta.allure:allure-junit5:2.13.9'
+}
+
+test {
+    useJUnitPlatform()
+    ignoreFailures = true // Continue execution even if there are test failures
+}
+
+allure {
+    version = '2.13.9'
+    autoconfigure = true
+    aspectjweaver = true
+}
+
+// Custom task to clean, test, and serve Allure report
+tasks.register('clean.test.allureserve') {
+    dependsOn 'clean', 'test'
+    finalizedBy 'allureServe'
+}
