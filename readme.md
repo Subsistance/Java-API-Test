@@ -6,6 +6,7 @@ Test API automation project using Java/JUnit5/REST Assured/Gradle/Allure
 
 - [Installation](#installation)
 - [Running Tests](#running-tests)
+- [Notes on Tests structure](#additional-notes-on-tests)
 - [Running WordFrequencyAnalyzer](#running-wordfrequencyanalyzer)
 
 ## Installation
@@ -56,7 +57,7 @@ But it's better to use the custom command i've provided, that does clean, runnin
 
 You can also manually open the report file after running tests by using build/reports/tests/test/index.html
 
-### Additional notes on tests
+## Additional notes on tests
 
 Just to be clear: i know that the best practices instruct that actual logic/methods should be separated from test steps
 for a more modular structure and separation of concern, etc. 
