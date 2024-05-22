@@ -24,12 +24,14 @@ Clone the project repository from GitHub:
 
 ```bash
 git clone https://github.com/Subsistance/Java-API-Test.git
-cd your-repository
+cd Java-API-Test
 ```
 
 ### Build the Project
 
-Use Gradle to build the project:
+Open the project using your IDE of choice (i used IntelliJ IDEA)
+
+Use Gradle to build the project by terminal:
 
 ```bash
 ./gradlew build
@@ -40,7 +42,7 @@ This will compile the project and download all necessary dependencies.
 ## Running Tests
 ### Run All Tests
 
-To run all tests in the project, use the following command:
+To run all tests in the project, use the following terminal command:
 
 ```bash
 ./gradlew test
