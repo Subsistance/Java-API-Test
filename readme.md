@@ -1,6 +1,6 @@
-# Project Title
+# Java-API-Test
 
-A brief description of your project.
+Test API automation project using Java/JUnit5/REST Assured/Gradle/Allure 
 
 ## Table of Contents
 
@@ -55,6 +55,13 @@ But it's better to use the custom command i've provided, that does clean, runnin
 ```
 
 You can also manually open the report file after running tests by using build/reports/tests/test/index.html
+
+### Additional notes on tests
+
+Just to be clear: i know that the best practices instruct that actual logic/methods should be separated from test steps
+for a more modular structure and separation of concern, etc. 
+But keeping in mind that this is a relatively trivial personal project, i found that doing so overcomplicated things.
+I ultimately decided to keep it simple and left almost everything in the same test class except for the reusable setup method.
 
 ## Running WordFrequencyAnalyzer
 
