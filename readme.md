@@ -23,7 +23,7 @@ Follow these steps to set up the project on your local machine.
 Clone the project repository from GitHub:
 
 ```bash
-git clone https://github.com/yourusername/your-repository.git
+git clone https://github.com/Subsistance/Java-API-Test.git
 cd your-repository
 ```
 
@@ -34,6 +34,8 @@ Use Gradle to build the project:
 ```bash
 ./gradlew build
 ```
+
+This will compile the project and download all necessary dependencies.
 
 ## Running Tests
 ### Run All Tests
