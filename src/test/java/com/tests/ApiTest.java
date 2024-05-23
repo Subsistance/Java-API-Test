@@ -75,7 +75,7 @@ public class ApiTest extends TestBase {
                 .body("[0].body", notNullValue());
     }
 
-    // Test for updating a post
+    // Test for updating a post via PUT
     @Test
     public void testUpdatePost() {
 
@@ -104,6 +104,21 @@ public class ApiTest extends TestBase {
                 .body("title", equalTo(updatedTitle))
                 .body("body", equalTo(updatedBody))
                 .body("userId", equalTo(userId));
+    }
+
+    // Test for updating a post via PATCH
+    @Test
+    public void testPatchPost() {
+        String patchedPost = "{ \"title\": \"patched title\" }";
+
+        given()
+                .contentType(ContentType.JSON)
+                .body(patchedPost)
+        .when()
+                .patch("/posts/1")
+        .then()
+                .statusCode(200)
+                .body("title", equalTo("patched title"));
     }
 
     // Test for deleting a post
